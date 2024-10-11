@@ -229,13 +229,22 @@
 		border: 1px solid rgba(255, 255, 255, 0.1);
 		box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
 		position: relative;
-		top: 19px;
+		top: 85px;
 
 	}
 	
 	
-	div.pz-nav-drawer__group[data-testid="mini-crossword"]:hover {
-		background-color: red;
+	.pz-nav-drawer__link:hover {
+		margin-left: 10px !important;
+		transition: margin-left 0.2s ease;
+		background-color: transparent;
+	}
+	
+	.pz-nav-drawer__link.selected {
+		background-color: transparent;
+	}
+	.connections-sports__container {
+		display:none !important; 
 	}
 	
 	
@@ -445,9 +454,15 @@
 	.ToolbarItem-module_toolbar_item__xrBr_ {
 		@buttons();
 		margin-top:30px;
+		margin-left: 3px;
 	}
 	
-	.ToolbarItem-module_toolbar_item__xrBr_:hover {
+	.pz-moment__close_text.Congrats-module_closeButton__KtTXC.slide-up {
+		@buttons();
+	}
+	
+	.ToolbarItem-module_toolbar_item__xrBr_:hover,
+	.pz-moment__close_text.Congrats-module_closeButton__KtTXC.slide-up:hover {
 		@buttonsHover();
 	}
 	
@@ -554,6 +569,20 @@
 		background-color: @creamColor;
 		color: #5c0f4a;
 	}
+	
+	/* Connections Bot */ 
+	
+	.nytapp-vi-interactive.nytapp-vi-interactive-minimal,
+	.page-0.fides-overlay-modal-link-shown.tap,
+	.interactive,
+	.interactive-minimal.meteredContent.interactive-content.interactive-size-medium.css-1n5umza {
+		background-color: red !important;
+	}
+	.header-container.svelte-armixu.svelte-armixu,
+	.bot-wrapper.svelte-14ye05.svelte-14ye05 {
+		background-color: transparent !important;
+	}
+	
 	
 	/*ANCHOR [Game page: Strands] */
 	
@@ -682,6 +711,17 @@
 	
 	.mini__congrats-modal--content {
 		color: @creamColor !important;
+	}
+	
+	.xwd__toolbar_icon--pencil:hover,
+	.xwd__toolbar_icon--settings-gear:hover {
+		background-color: transparent !important;
+	}
+	
+	/*ANCHOR [Game page: The Crossword ] */
+	
+	.xwd__printtools--button {
+		display: none !important;
 	}
 	
 }
