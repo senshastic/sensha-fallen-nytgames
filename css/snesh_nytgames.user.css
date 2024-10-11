@@ -19,6 +19,7 @@
 
 	@hap				: url('https://github.com/senshastic/sneshGPT/blob/main/assets/Hap.png?raw=true');
 	@borderRadius		: 12px;
+	@creamColor			: #d0b575;
 	
 	
 	
@@ -349,7 +350,7 @@
 	.Welcome-module_contentWelcome__TL17B,
 	.Modal-module_content__TrPIX,
 	.Stats-module_graphContainer__Al4D1 .Stats-module_graph__f4tUv .Stats-module_numGuesses__jFa2m {
-		color:#d0b575;
+		color: @creamColor;
 	}
 
 
@@ -462,6 +463,72 @@
 	.Key-module_key__kchQI:hover {
 		box-shadow: 0 0px 8px rgba(0, 0, 0, .46);
 		transform: translateY(-1px);
+	}
+	
+	
+	/*ANCHOR [Game page: CONNECTIONS] */
+	
+	.pz-moment {
+		@disappear();
+		color: @creamColor;
+	}
+	
+	.pz-game-wrapper {
+		@backdrop();
+	}
+	
+	.pz-moment__button {
+		@buttons();
+	}
+	
+	.pz-moment__button:hover,
+	.pz-moment__button:active {
+		@buttonsHover();
+	}
+	
+	.pz-game-toolbar,
+	.pz-desktop .pz-moment__congrats,
+	.Stats-module_stats__Oq7rS {
+		@disappear();
+	}
+	
+	.NextGameButton-module_nextGameCardContainer__VBiBH {
+		display:none !important;
+	}
+	
+	.Stat-module_stats__row__xnktL,
+	.BotLinkCTA-module_botLink__QjG6_.BotLinkCTA-module_borderBottom__8BcQ3 {
+    border-bottom: 1px solid @creamColor;
+	border-top: 1px solid @creamColor;
+	}
+	
+	.Stat-module_stats__row__xnktL, .BotLinkCTA-module_botLink__QjG6_.BotLinkCTA-module_borderBottom__8BcQ3 {
+		border-bottom: 1px solid @creamColor;
+		@buttons();
+	}
+	
+	.Stat-module_stats__row__xnktL, .BotLinkCTA-module_botLink__QjG6_.BotLinkCTA-module_borderBottom__8BcQ3:hover,
+	.button-primary.Congrats-module_button__HW5bZ:hover,
+	.ActionButton-module_button__IlhXt.ActionButton-module_xLarge__zj7ZN:hover {
+		@buttonsHover();
+	}
+		
+	.button-primary.Congrats-module_button__HW5bZ,
+	.ActionButton-module_button__IlhXt.ActionButton-module_xLarge__zj7ZN {
+		@buttons();
+		border: none;
+		color: @creamColor;
+	}	
+	
+	.pz-section,
+	.pz-game-wrapper,
+	.ToolbarItem-module_toolbarColors__d6naZ, 
+	.ToolbarItem-module_toolbar_item__xrBr_ {
+		color: white !important;
+	}
+	
+	.pz-game-field {
+		color: @creamColor;
 	}
 	
 }
