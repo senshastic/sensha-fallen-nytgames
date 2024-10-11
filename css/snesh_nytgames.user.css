@@ -531,4 +531,65 @@
 		color: @creamColor;
 	}
 	
+	/*ANCHOR [Game page: Strands] */
+	
+	
+	._momentWrapper_n2itn_1 {
+		@backdrop();
+		color: @creamColor;
+	}
+	
+	._momentTitle_xfg9t_1 {
+		color: @creamColor;
+	}
+	
+	._momentButton_m3x3m_1._primary_m3x3m_113._default_m3x3m_1,
+	.ToolbarButton-module_button__Y5yUu,
+	.styles-module_resultsButton__srg7k{
+		@buttons();
+		border: none;
+		color: @creamColor !important;
+	}	
+	
+	._momentButton_m3x3m_1._primary_m3x3m_113._default_m3x3m_1:hover,
+	.ToolbarButton-module_button__Y5yUu:hover,
+	.styles-module_resultsButton__srg7k:hover {
+		@buttonsHover();
+		color: @creamColor;
+	}	
+	
+	.strands__modal {
+		@backdrop();
+		background-color: rgba(1, 27, 67, .92) !important;
+		color: @creamColor;
+	}
+	
+	button.button-dark-mode-support,
+	.xwd__modal--close {
+		@buttons();
+		border: none;
+		color: @creamColor !important;
+		padding:15px !important;
+	}
+	
+	button.button-dark-mode-support:hover,
+	.xwd__modal--close:hover {
+		@buttonsHover();
+		border: none;
+		color: @creamColor !important;
+	}	
+	
+	.riddle-module_label__OY9sx {
+		@backdrop();
+	}
+	
+	.riddle-module_riddle__w8JzO {
+		border: 1px solid @creamColor;
+	}
+	
+	.styles-module_wrapper__A7No7.styles-module_disabled__iIL5I {
+		border: 1px solid @creamColor;
+		border-radius: @borderRadius;
+	}
+	
 }
