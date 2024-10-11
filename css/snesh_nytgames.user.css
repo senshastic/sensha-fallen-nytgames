@@ -1,5 +1,5 @@
 /* ==UserStyle==
-@name           NYTGames_Jojo&Floflo
+@name           NYTGames_JF
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
 @description    A new userstyle
@@ -569,7 +569,10 @@
 	
 	._momentButton_m3x3m_1._primary_m3x3m_113._default_m3x3m_1,
 	.ToolbarButton-module_button__Y5yUu,
-	.styles-module_resultsButton__srg7k{
+	.styles-module_resultsButton__srg7k,
+	.hint-module_lightbulb__YfeFm,
+	.hint-module_bluebulb__QtJ5d,
+	.hint-module_overlay___9ixH {
 		@buttons();
 		border: none;
 		color: @creamColor !important;
@@ -577,16 +580,24 @@
 	
 	._momentButton_m3x3m_1._primary_m3x3m_113._default_m3x3m_1:hover,
 	.ToolbarButton-module_button__Y5yUu:hover,
-	.styles-module_resultsButton__srg7k:hover {
+	.styles-module_resultsButton__srg7k:hover,
+	.hint-module_lightbulb__YfeFm:hover,
+	.hint-module_bluebulb__QtJ5d:hover,
+	.hint-module_overlay___9ixH:hover {
 		@buttonsHover();
 		color: @creamColor;
+		border: none;
 	}	
 	
+	.ToolbarButton-module_button__Y5yUu {
+		margin-left: 2px;
+	}
 	.strands__modal {
 		@backdrop();
 		background-color: rgba(1, 27, 67, .92) !important;
 		color: @creamColor;
 	}
+	
 	
 	button.button-dark-mode-support,
 	.xwd__modal--close {
@@ -621,6 +632,14 @@
 	.styles-module_word__LwKKp.styles-module_invalidshake__KMQkk,
 	.styles-module_strandsBtn__xobCT {
 		color: @creamColor !important;
+	}
+	
+	.styles-module_strandsBtn__xobCT.styles-module_item__ZXXc7[style="background-color: var(--yellow);"] {
+		color: black !important;
+	}
+	
+	.styles-module_strandsBtn__xobCT.styles-module_item__ZXXc7[style="background-color: var(--blue);"] {
+		color: black !important;
 	}
 	
 	/*ANCHOR [Game page: The Mini ] */
