@@ -616,4 +616,53 @@
 		border-radius: @borderRadius;
 	}
 	
+	/* letters in strands*/ 
+	
+	.styles-module_word__LwKKp.styles-module_invalidshake__KMQkk,
+	.styles-module_strandsBtn__xobCT {
+		color: @creamColor !important;
+	}
+	
+	/*ANCHOR [Game page: The Mini ] */
+	.xwd__modal--body {
+		@backdrop()
+	}
+	
+	.xwd__modal--body {
+		background-color: rgba(1, 27, 67, .92) !important;
+	}
+	
+	.xwd__modal--overlay,
+	.xwd__modal--content,
+	.xwd__toolbar--wrapper {
+		@disappear();
+		
+	}
+	.xwd__tool--button button {
+		@buttons();
+		border: none;
+		color: @creamColor !important;
+		margin-left:3px;
+	}
+	
+	.xwd__tool--button button:hover {
+		@buttonsHover();
+		border: none;
+		color: @creamColor !important;
+	}	
+	
+	.xwd__clue-bar-desktop--bar,
+	.xwd__clue--li.xwd__clue--selected {
+		@backdrop();
+		color: @creamColor !important;
+	}
+	
+	.xwd__clue--highlighted {
+		border-left-color:rgba(5, 5, 5, .18) !important;
+	}
+	
+	.mini__congrats-modal--content {
+		color: @creamColor !important;
+	}
+	
 }
