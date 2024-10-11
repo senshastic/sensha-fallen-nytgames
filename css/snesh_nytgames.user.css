@@ -451,11 +451,17 @@
 		@buttonsHover();
 	}
 	
-	.Tile-module_tile__UWEHN[data-state=empty] {
+	.Tile-module_tile__UWEHN[data-state=empty],
+	.Tile-module_tile__UWEHN[data-state=tbd] {
 		border: 2px solid #6c583edb
 	}
 	
-	.Tile-module_tile__UWEHN[data-state=empty]:hover {
+	.Tile-module_tile__UWEHN[data-state=tbd] {
+		@backdrop();
+	}
+	
+	.Tile-module_tile__UWEHN[data-state=empty]:hover,
+	.Tile-module_tile__UWEHN[data-state=tbd]:hover {
 		box-shadow: 0 0px 8px rgba(255, 197, 88, .37);
 		transform: translateY(-1px);
 	}
@@ -509,16 +515,22 @@
 	
 	.Stat-module_stats__row__xnktL, .BotLinkCTA-module_botLink__QjG6_.BotLinkCTA-module_borderBottom__8BcQ3:hover,
 	.button-primary.Congrats-module_button__HW5bZ:hover,
-	.ActionButton-module_button__IlhXt.ActionButton-module_xLarge__zj7ZN:hover {
+	.ActionButton-module_button__IlhXt.ActionButton-module_xLarge__zj7ZN:hover,
+	.ActionButton-module_button__IlhXt:hover {
 		@buttonsHover();
 	}
 		
 	.button-primary.Congrats-module_button__HW5bZ,
-	.ActionButton-module_button__IlhXt.ActionButton-module_xLarge__zj7ZN {
+	.ActionButton-module_button__IlhXt.ActionButton-module_xLarge__zj7ZN,
+	.ActionButton-module_button__IlhXt {
 		@buttons();
 		border: none;
-		color: @creamColor;
+		color: @creamColor !important;
 	}	
+	
+	.ActionButton-module_button__IlhXt:disabled {
+		color: #8f8b81 !important;
+	}
 	
 	.pz-section,
 	.pz-game-wrapper,
@@ -527,8 +539,20 @@
 		color: white !important;
 	}
 	
-	.pz-game-field {
+	.pz-game-field,
+	.Mistakes-module_mistakesContent__nlijY {
 		color: @creamColor;
+	}
+	
+	
+	.Card-module_label__U_Q2H.Card-module_selected__cN2eT {
+		@backdrop();
+	}
+	
+	.Card-module_label__U_Q2H,
+	.Mistakes-module_bubble__nDlOh {
+		background-color: @creamColor;
+		color: #5c0f4a;
 	}
 	
 	/*ANCHOR [Game page: Strands] */
