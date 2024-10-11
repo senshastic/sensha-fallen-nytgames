@@ -1,0 +1,467 @@
+/* ==UserStyle==
+@name           NYTGames_Jojo&Floflo
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Snesh
+@preprocessor	less
+@var checkbox	grain "Grainy texture" 1
+@var select		gradType    "Gradient style" ["animated:Animated*", "flouss: Static", "nouss:None"]
+@var checkbox	grain "Grainy texture" 1
+@var color   	gradcolor1 "Gradient Color 1" rgb(43, 1, 91)
+@var color   	gradcolor2 "Gradient Color 2" rgb(122, 2, 54)
+@var color   	gradcolor3 "Gradient Color 3" rgb(8, 19, 54)
+@var color   	gradcolor4 "Gradient Color 4" rgb(26, 58, 102)
+==/UserStyle== */
+@-moz-document regexp("https://www\.nytimes\.com/(games.*|crosswords(/.*)?)$") {
+	
+	/*ANCHOR [VARIABLES]*/
+
+	@hap				: url('https://github.com/senshastic/sneshGPT/blob/main/assets/Hap.png?raw=true');
+	@borderRadius		: 12px;
+	
+	
+	
+	/*ANCHOR [DETACHED RULESETS] */
+	
+	@gradientBackground: {
+		background: linear-gradient(109.6deg, @gradcolor3 0%, @gradcolor4 25%, @gradcolor1 50%, @gradcolor2 100%);
+	}
+	
+	@buttons: {
+		background-color: rgba(5, 5, 5, .18) !important;
+		border-radius: 12px !important;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+	
+	@buttonsHover: {
+		background-color: rgba(5, 5, 5, 0) !important;
+		border-radius: 12px;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		transform: translateY(-4px);
+	}
+	
+	@transparentButtons: {
+		border-radius: 12px !important;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+	
+	@transparentButtonsHover: {
+		border-radius: 12px;
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.37);
+		-webkit-backdrop-filter: blur(100px);
+		backdrop-filter: blur(100px) saturate(110%);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		transform: translateY(-4px);
+	}
+	
+	
+	@buttonsHoverWhite: {
+		background-color: rgba(5, 5, 5, 0) !important;
+		border-radius: 12px;
+		box-shadow: 0 8px 15px rgba(255, 255, 255, .37) !important;
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transform: translateY(-4px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform box-shadow 0.3s ease-in-out;
+	}
+	
+	@menuItemHover: {
+		border: 1px solid rgba(0, 204, 255, 0.6);
+		background-color: rgba(5, 5, 5, 0.35) !important;
+		box-shadow: 0 0 10px 2px rgba(0, 204, 255, 0.3);
+		transform: translateY(-2px);
+		transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+		border-radius: 12px;
+	}
+	
+	@grainyTexture: {
+		content: "" !important;
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		pointer-events: none !important;
+		z-index: 0 !important;
+		background: url("https://grainy-gradients.vercel.app/noise.svg") repeat !important;
+		opacity: 0.23 !important;
+	}
+	
+	@backdrop: {
+		background-color: rgba(5, 5, 5, .18) !important;
+		border-radius: 12px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+		padding: 5px;
+	}
+	
+	@disappear: {
+		background: transparent !important;
+		border: 0px;
+		box-shadow: none;
+	}
+	
+	@transparent: {
+		background: transparent;
+	}
+	
+	@noise: {
+		content: "" !important;
+		background: url("https://grainy-gradients.vercel.app/noise.svg") repeat !important;
+		background-attachment: fixed;
+		background-repeat    : no-repeat;
+		background-size: cover;
+		position: absolute;
+        overflow: hidden;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		pointer-events: none !important;
+		z-index: 0 !important;
+		opacity: 0.23 !important;
+	}
+	
+	/*ANCHOR [Top bar] */
+	
+	/* Replaces with hap */ 
+	
+	#js-logo-nav {
+		display: block;
+		width: 150px;
+		height: 35px;
+		background-image: @hap;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-left: 20px;
+	}
+
+	.pz-nav__logo {
+		display: none;
+		/* Hides the original SVG */
+	}
+
+
+	/*ANCHOR [Gradient background options and grain] */
+
+	body when (@gradType =flouss) {
+		@gradientBackground();
+	}
+
+
+	body when (@gradType =animated) {
+		@gradientBackground();
+		background-size: 400% 400%;
+		animation: gradientAnimation 20s ease infinite;
+	}
+
+
+	body when (@gradType =nouss) {
+		background-color: @gradcolor3 !important;
+	}
+	
+	
+
+	@keyframes gradientAnimation {
+		0% {
+			background-position: 0% 0%;
+		}
+		50% {
+			background-position: 100% 100%;
+		}
+		100% {
+			background-position: 0% 0%;
+		}
+	}
+	
+
+	body::before when (@grain =1) {
+		@noise();
+	}
+	
+	/*ANCHOR [Transparenting shit] */
+
+	.js-global-nav,
+	.hub-welcome {
+		background: transparent;
+	}
+	
+	
+	.pz {
+		&-footer,
+		&-nav,
+		&-header,
+		&-hide-loading,
+		&-dont-touch,
+		&-content,
+		&-header.pz-hide-loading,
+		&-game-field {
+			@disappear();
+		}
+	}
+	
+	.hub-guide-promo-section,
+	.printTool {
+		display: none !important;
+	}
+	
+	
+	
+	/*ANCHOR [Sidebar Styling] */
+	
+	
+	.pz-nav-drawer__account {
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+		backdrop-filter: blur(15px) saturate(180%) contrast(90%);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+		position: relative;
+		top: 19px;
+
+	}
+	
+	
+	div.pz-nav-drawer__group[data-testid="mini-crossword"]:hover {
+		background-color: red;
+	}
+	
+	
+	/*ANCHOR [Main Page, games menu] */
+	
+	
+	.hub-stats-card__puzzle-info,
+	.featured,
+	.hub-game-card {
+		@backdrop();
+		border: 0px;
+		color: white;
+	}
+	
+	.hub-game-card:hover:not(.hub-dual-link .hub-game-card__button:first-child):not(.hub-dual-link .hub-game-card__button:nth-child(2)) {
+		@buttonsHoverWhite();
+	}
+	
+	.hub-game-card__cover,
+	.tab__tab {
+		@disappear();
+	}
+	
+	
+	/* additional backdrop on game name */ 
+	
+	.strands .hub-game-card__cover,
+	.spelling-bee .hub-game-card__cover,
+	.wordle .hub-game-card__cover,
+	.connections .hub-game-card__cover,
+	.letter-boxed .hub-game-card__cover,
+	.tiles .hub-game-card__cover,
+	.sudoku .hub-game-card__cover,
+	.puzzleInfo,
+	.tab__tabNav {
+		@backdrop();
+		border: 0px !important;
+	}
+	
+	.puzzleInfo .puzzleInfoContent,
+	.progress__sectionHeader,
+	.section__header {
+		color: white;
+	}
+
+	.hub-stats-card__puzzle-info:hover,
+	.featured:hover {
+		@buttonsHoverWhite();
+	}
+	
+	.tab__tab{
+		color: white !important;
+	}
+	
+	
+	.tab__tabGroup .tab__tab>.active {
+		@backdrop();
+		color: transparent;
+		border:2px;
+	}
+
+	.hub-game-card__button {
+		@backdrop();
+		border: 0px;
+		color: white;
+	}
+	
+	.pz-footer__link {
+		padding: 2px;
+	}
+	
+	.hub-wordplay-link:hover,
+	.hub-game-card__button:hover,
+	.progress__playMoreLink:hover,
+	.tab__tabGroup .tab__tab>.active:hover,
+	.pz-footer__link:hover {
+		@menuItemHover();
+		
+	}
+	
+	/*ANCHOR [Game page: WORDLE] */
+	
+	/* Home page */
+
+	.Welcome-module_contentWelcome__TL17B when (@gradType =flouss) {
+		@gradientBackground();
+	}
+
+
+	.Welcome-module_contentWelcome__TL17B when (@gradType =animated) {
+		@gradientBackground();
+		background-size: 400% 400%;
+		animation: gradientAnimation 20s ease infinite;
+	}
+
+
+	.Welcome-module_contentWelcome__TL17B when (@gradType =nouss) {
+		background-color: @gradcolor3 !important;
+	}
+	
+	.Welcome-module_contentWelcome__TL17B::before when (@grain =1) {
+		@noise();
+	}
+	
+	.Welcome-module_button__ZG0Zh {
+		@buttons();
+	}
+	.Welcome-module_button__ZG0Zh:hover {
+		@buttonsHover();
+	}
+	
+	.Welcome-module_contentWelcome__TL17B,
+	.Modal-module_content__TrPIX,
+	.Stats-module_graphContainer__Al4D1 .Stats-module_graph__f4tUv .Stats-module_numGuesses__jFa2m {
+		color:#d0b575;
+	}
+
+
+	/* Wordle bot page */
+	
+	.game-icon[data-testid="icon-close"] {
+		@buttons();
+	}
+	
+	.game-icon[data-testid="icon-close"]:hover {
+		@buttonsHover();
+	}
+	
+	.Modal-module_content__TrPIX when (@gradType =flouss) {
+		@gradientBackground();
+	}
+
+
+	.Modal-module_content__TrPIX when (@gradType =animated) {
+		@gradientBackground();
+		background-size: 400% 400%;
+		animation: gradientAnimation 20s ease infinite;
+	}
+
+
+	.Modal-module_content__TrPIX when (@gradType =nouss) {
+		background-color: @gradcolor3 !important;
+	}
+	
+	.Modal-module_content__TrPIX::before when (@grain =1) {
+		@noise();
+	}
+	
+	.BotLink-module_botLink__uRdNy {
+		@buttons();
+		border: none;
+	}
+	
+	.BotLink-module_botLink__uRdNy:hover {
+		@buttonsHover();
+	}
+	
+	.Footer-module_bottomSheet__XnX4f {
+		@backdrop();
+		margin-top: 20px;
+	}
+	
+	.NextGameCTA-module_spellingBeeCard__FsAXc {
+		display: none !important;
+	}
+	
+	.NextGameCTA-module_wordleArchiveCard__foyIl {
+		margin-top: 20px;
+		padding: 30px;
+		@buttons();
+		background: #d0b575ab !important;
+	}
+	
+	.NextGameCTA-module_wordleArchiveCard__foyIl:hover {
+		margin-top: 20px;
+		padding: 30px;
+		@buttonsHover();
+		background: #d0b575db !important;
+	}
+	
+	.Footer-module_shareButton__cHprS {
+		@transparentButtons();
+	}
+	
+	.Footer-module_shareButton__cHprS:hover {
+		@transparentButtonsHover();
+		background: #77e36cdb !important;
+	}
+	
+	/* Wordle archives */
+	
+	.ArchiveLayout-module_wrapper__agJhw {
+		@backdrop();
+	}
+	
+	/* Actual game page */
+	
+	.dark .Toolbar-module_wordle__CibUu {
+		border: none;
+	}
+
+
+	.dark .ToolbarItem-module_toolbarColors__d6naZ, .dark .ToolbarItem-module_toolbar_item__xrBr_ {
+		@disappear(); 
+	}
+	
+	.ToolbarItem-module_toolbar_item__xrBr_ {
+		@buttons();
+		margin-top:30px;
+	}
+	
+	.ToolbarItem-module_toolbar_item__xrBr_:hover {
+		@buttonsHover();
+	}
+	
+	.Tile-module_tile__UWEHN[data-state=empty] {
+		border: 2px solid #6c583edb
+	}
+	
+	.Tile-module_tile__UWEHN[data-state=empty]:hover {
+		box-shadow: 0 0px 8px rgba(255, 197, 88, .37);
+		transform: translateY(-1px);
+	}
+	
+	.Key-module_key__kchQI:hover {
+		box-shadow: 0 0px 8px rgba(0, 0, 0, .46);
+		transform: translateY(-1px);
+	}
+	
+}
