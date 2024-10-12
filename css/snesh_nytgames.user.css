@@ -13,7 +13,10 @@
 @var color   	gradcolor3 "Gradient Color 3" rgb(8, 19, 54)
 @var color   	gradcolor4 "Gradient Color 4" rgb(26, 58, 102)
 ==/UserStyle== */
+
 @-moz-document regexp("https://www\.nytimes\.com/(games.*|crosswords(/.*)?)$") {
+
+	/*ANCHOR [SNESHLIB - Start] */
 	
 	/*ANCHOR [VARIABLES]*/
 
@@ -134,6 +137,8 @@
 		z-index: 0 !important;
 		opacity: 0.23 !important;
 	}
+
+	/*ANCHOR [SNESHLIB - End]*/
 	
 	/*ANCHOR [Top bar] */
 	
