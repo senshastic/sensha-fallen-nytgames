@@ -21,7 +21,7 @@ If you do not like the gradient or if you are like me and you like changing colo
 
 ![](assets/snesh_nyt_GUI.png)
 
-I also added two little scripts that auto-fill your starter word in WORLDE. If you are like me and like to use the same word everytime you can use the configurable script and just enter your starter word in the first few lines. If you are like Fallen and *need* a new word everytime, you can use the randomized script that will pull a random 5 letters word from a list of 14000 words and pre-fill it for you. 
+I also added two little scripts that auto-fill your starter word in Wordle. If you are like me and like to use the same word everytime you can use the configurable script and just enter your starter word in the first few lines. If you are like Fallen and *need* a new word everytime, you can use the randomized script that will pull a random 5 letters word from a list of 14000 words and pre-fill it for you. 
 
 ![](assets/snesh_nyt_wordle.gif)
 
