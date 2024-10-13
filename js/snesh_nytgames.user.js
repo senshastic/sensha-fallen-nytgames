@@ -3,11 +3,13 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://www.nytimes.com/crosswords*
 // @match       https://www.nytimes.com/game*
+// @match       https://www.nytimes.com/puzzles*
+// @match       https://www.nytimes.com/interactive*
 // @downloadURL https://github.com/senshastic/sensha-fallen-nytgames/raw/refs/heads/main/js/snesh_nytgames.user.js
 // @updateURL   https://github.com/senshastic/sensha-fallen-nytgames/raw/refs/heads/main/js/snesh_nytgames.user.js
 // @grant       none
 // @icon        https://github.com/senshastic/sneshGPT/blob/main/assets/Hap.png?raw=true
-// @version     1.0.0
+// @version     1.0
 // @author      sensha
 // @description 10/11/2024, 4:54:01 AM
 // ==/UserScript==
@@ -159,12 +161,28 @@
         sidebar.appendChild(footer);
     }
 
+    function replaceFooterLink() {
+    const legalLinkElement = document.querySelector('.Footer-module_legalLink__saQgH');
+    if (legalLinkElement) {
+        legalLinkElement.innerHTML = `
+            <a href="https://github.com/senshastic" style="text-decoration: none; color: black;">
+                SneshCorp. @1984. All rights reserved (to
+            </a>
+            <a href="https://github.com/FallenStar08" style="text-decoration: none; color: black;">
+                FallenStar).
+            </a>
+        `;
+    }
+}
+
+
     function initializeSidebarObserver() {
         const observer = new MutationObserver(() => {
             let sidebar = document.querySelector('#js-nav-drawer') || document.querySelector('#content-nav');
             if (sidebar) {
                 applySidebarStyles(sidebar);
                 initializeSidebarToggle(sidebar);
+                replaceFooterLink();  // Replace the link when the sidebar initializes
                 observer.disconnect();
             }
         });
@@ -178,6 +196,7 @@
         if (sidebar) {
             applySidebarStyles(sidebar);
             initializeSidebarToggle(sidebar);
+            replaceFooterLink();  // Replace the link when the sidebar is initialized
         } else {
             initializeSidebarObserver();
         }
@@ -192,6 +211,7 @@
                 if (sidebar) {
                     applySidebarStyles(sidebar);
                     initializeSidebarToggle(sidebar);
+                    replaceFooterLink();  // Replace the link when the sidebar is opened via button
                 }
             }
         });
