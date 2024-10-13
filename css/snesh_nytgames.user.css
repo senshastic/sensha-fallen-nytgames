@@ -15,7 +15,7 @@
 
 @-moz-document regexp("https://www\\.nytimes\\.com/(games.*|crosswords(/.*)?|puzzles(/.*)?)$") {
 
-		/*ANCHOR [SNESHLIB - Start] */
+	/*ANCHOR [SNESHLIB - Start] */
 	
 	/*ANCHOR [VARIABLES]*/
 
