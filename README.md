@@ -42,21 +42,21 @@ Install le JS scripts using whatever people use to manage userscripts. I used [V
 
 [![Static Badge](https://img.shields.io/badge/Install_directly_with-whatever-yellow)](https://github.com/senshastic/sensha-fallen-nytgames/raw/refs/heads/main/js/snesh_nytgames.user.js)
 
-- Configurable auto-fill for WORDLE Starter word :
+- Configurable auto-fill for Wordle Starter word :
 
 [![Static Badge](https://img.shields.io/badge/Install_directly_with-whatever-yellow)](https://github.com/senshastic/sensha-fallen-nytgames/raw/refs/heads/main/js/configurable_wordle_starter.user.js)
 
-- Randomized auto-fill for WORDLE Starter word :
+- Randomized auto-fill for Wordle Starter word :
 
 [![Static Badge](https://img.shields.io/badge/Install_directly_with-whatever-yellow)](https://github.com/senshastic/sensha-fallen-nytgames/raw/refs/heads/main/js/random_wordle_starter.user.js)
 
-I recommend installing at least sidebar and choose whichever version of the auto-fill you'd like for your WORDLE. 
+I recommend installing at least sidebar and choose whichever version of the auto-fill you'd like for your Wordle. 
 
 ![](assets/snesh_nyt_crossword.png)
 
 ### Credits 
 
-- [Fallen](https://github.com/FallenStar08) - We did 48 WORDLE together before I had the good sense of doing this. 
+- [Fallen](https://github.com/FallenStar08) - We did 48 Wordle together before I had the good sense of doing this. 
 
 
 ![](assets/snesh_nyt_connections.png)
