@@ -3,8 +3,11 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://www.nytimes.com/crosswords*
 // @match       https://www.nytimes.com/game*
+// @downloadURL   https://github.com/senshastic/sensha-fallen-nytgames/raw/refs/heads/main/js/snesh_nytgames.user.js
+// @updateURL   https://github.com/senshastic/sensha-fallen-nytgames/raw/refs/heads/main/js/snesh_nytgames.user.js
 // @grant       none
-// @version     1.0
+// @icon        https://github.com/senshastic/sneshGPT/blob/main/assets/Hap.png?raw=true
+// @version     1.0.0
 // @author      sensha
 // @description 10/11/2024, 4:54:01 AM
 // ==/UserScript==

@@ -5,6 +5,7 @@
 @description    A new userstyle
 @author         Snesh
 @preprocessor	less
+@updateURL		https://github.com/senshastic/sensha-fallen-nytgames/raw/refs/heads/main/css/snesh_nytgames.user.css
 @var select		gradType    "Gradient style" ["animated:Animated*", "flouss: Static", "nouss:None"]
 @var checkbox	grain "Grainy texture" 1
 @var color   	gradcolor1 "Gradient Color 1" rgb(43, 1, 91)
@@ -69,6 +70,14 @@
 		-webkit-backdrop-filter: blur(100px);
 		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 	}
+	
+	@buttonsFlat: {
+		border-radius: 12px !important;
+		backdrop-filter: blur(100px) saturate(110%);
+		-webkit-backdrop-filter: blur(100px);
+		transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+	
 	
 	@transparentButtonsHover: {
 		border-radius: 12px;
@@ -136,16 +145,15 @@
 		content: "" !important;
 		background: url("https://grainy-gradients.vercel.app/noise.svg") repeat !important;
 		background-attachment: fixed;
-		background-repeat    : no-repeat;
+		background-repeat: no-repeat;
 		background-size: cover;
-		position: absolute;
-        overflow: hidden;
+		position: fixed; 
 		top: 0 !important;
 		left: 0 !important;
 		width: 100% !important;
 		height: 100% !important;
 		pointer-events: none !important;
-		z-index: 0 !important;
+		z-index: -1 !important; 
 		opacity: 0.23 !important;
 	}
 
@@ -201,10 +209,11 @@
 		@gradientAnimation();
 	}
 	
-
+	
 	body::before when (@grain =1) {
-		@noise();
+    	@noise();
 	}
+	
 	
 	/*ANCHOR [Transparenting shit] */
 
@@ -718,7 +727,6 @@
 	}
 	
 	._momentButton_m3x3m_1._primary_m3x3m_113._default_m3x3m_1,
-	.ToolbarButton-module_button__Y5yUu,
 	.styles-module_resultsButton__srg7k,
 	.hint-module_lightbulb__YfeFm,
 	.hint-module_bluebulb__QtJ5d,
@@ -728,8 +736,17 @@
 		color: @creamColor !important;
 	}	
 	
+	.ToolbarButton-module_button__Y5yUu {
+		@buttonsFlat();
+		margin-left: 3px;
+	}
+	
+	.ToolbarButton-module_button__Y5yUu:hover {
+		@transparentButtonsHover();
+	}
+	
+	
 	._momentButton_m3x3m_1._primary_m3x3m_113._default_m3x3m_1:hover,
-	.ToolbarButton-module_button__Y5yUu:hover,
 	.styles-module_resultsButton__srg7k:hover,
 	.hint-module_lightbulb__YfeFm:hover,
 	.hint-module_bluebulb__QtJ5d:hover,
@@ -967,6 +984,7 @@
 	.conversion-tls-content-box{
 		@backdrop();
 	}
-
+	
+	
 }
 
