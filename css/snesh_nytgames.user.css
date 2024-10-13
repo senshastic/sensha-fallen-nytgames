@@ -14,7 +14,7 @@
 @var color   	gradcolor4 "Gradient Color 4" rgb(26, 58, 102)
 ==/UserStyle== */
 
-@-moz-document regexp("https://www\.nytimes\.com/(games.*|crosswords(/.*)?)$") {
+@-moz-document regexp("https://www\\.nytimes\\.com/(games.*|crosswords(/.*)?|puzzles(/.*)?)$") {
 
 	/*ANCHOR [SNESHLIB - Start] */
 	
@@ -317,6 +317,10 @@
 		color: white;
 	}
 	
+	.pz-footer__wrapper {
+		color: @creamColor !important;
+	}
+	
 	.pz-footer__link {
 		padding: 2px;
 	}
@@ -589,7 +593,7 @@
 	}
 	
 	
-	/*ANCHOR [Game page: Strands] */
+	/*ANCHOR [Game page: STRANDS] */
 	
 	
 	._momentWrapper_n2itn_1 {
@@ -656,7 +660,8 @@
 		border: 1px solid @creamColor;
 	}
 	
-	.styles-module_wrapper__A7No7.styles-module_disabled__iIL5I {
+	.styles-module_wrapper__A7No7.styles-module_disabled__iIL5I,
+	.styles-module_wrapper__A7No7 {
 		border: 1px solid @creamColor;
 		border-radius: @borderRadius;
 	}
@@ -676,7 +681,9 @@
 		color: black !important;
 	}
 	
-	/*ANCHOR [Game page: The Mini ] */
+	
+	
+	/*ANCHOR [Game page: THE MINI ] */
 	.xwd__modal--body {
 		@backdrop()
 	}
@@ -723,10 +730,131 @@
 		background-color: transparent !important;
 	}
 	
-	/*ANCHOR [Game page: The Crossword ] */
+	/*ANCHOR [Game page: THE CROSSWORD ] */
 	
 	.xwd__printtools--button {
 		display: none !important;
 	}
+	
+	/*ANCHOR [Game page: SUDOKU ] */
+	.su-cell:hover {
+		transform: translateY(-1px);
+		box-shadow: inset 0 0 6px 1px @creamColor;
+	}
+	
+	.pz-modal__button.dark.large,
+	.su-keyboard__mode.normal.normalMode, 
+	.su-keyboard__mode.candidate, 
+	.su-keyboard__mode.candidate.candidateMode,
+	.su-keyboard__mode.normal,
+	.su-back__text-container,
+	.pz-toolbar-button.su-app__print,
+	.pz-toolbar-button.su-app__howto,
+	.pz-dropdown__button,
+	.pz-toolbar-button.su-app__settings {
+		@buttons();
+		border: none !important;
+		color: @creamColor !important;
+	}
+	
+	.pz-modal__button.dark.large:hover,
+	.su-keyboard__mode.normal.normalMode:hover, 
+	.su-keyboard__mode.candidate:hover, 
+	.su-keyboard__mode.candidate.candidateMode:hover,
+	.su-keyboard__mode.normal:hover,
+	.su-back__text-container:hover
+	.pz-toolbar-button.su-app__print:hover,
+	.pz-toolbar-button.su-app__howto:hover,
+	.pz-dropdown__button:hover,
+	.pz-toolbar-button.su-app__settings:hover,
+	.pz-dropdown__menu-item:hover{
+		@buttonsHover();
+		color: @creamColor !important;
+	}
+	
+	.su-timer {
+		@buttons();
+		padding: 10px;
+	}
+	
+	.su-timer:hover {
+		@buttonsHover();
+		padding: 10px;
+	}
+	
+	.su-cell.selected {
+		background-color: @creamColor;
+	}
+	
+	.pz-dropdown__list {
+		@backdrop();
+	}
+	
+	.su-toolbar .pz-dropdown__menu-item button {
+		border: none !important;
+	}
+	
+	.su-level,
+	.su-timer,
+	.su-back__text{
+		color: @creamColor !important;
+	}
+	
+	/*ANCHOR [Game page: SPELLING BEE ] */
+	
+	.pz-moment__welcome *,
+	.pz-toolbar-button {
+		color: @creamColor !important;
+	}
+	
+	.hive-action.hive-action__delete.sb-touch-button,
+	.hive-action.hive-action__shuffle.sb-touch-button,
+	.hive-action.hive-action__submit.sb-touch-button,
+	.pz-dropdown__button,
+	.pz-toolbar-button {
+		@buttons();
+		border: none !important;
+		color: @creamColor !important;
+	}
+	
+	.hive-action.hive-action__delete.sb-touch-button:hover,
+	.hive-action.hive-action__shuffle.sb-touch-button:hover,
+	.hive-action.hive-action__submit.sb-touch-button:hover,
+	.pz-toolbar-button:hover {
+		@buttonsHover();
+		color: @creamColor !important;
+	}
+	
+	.pz-dropdown__menu-item,
+	.pz-dropdown>.pz-dropdown__button:not(.pz-dropdown__show) {
+		@disappear();
+		border: none !important;
+	}
+	
+	/*ANCHOR [Game page: LETTER BOXED ] */
+	
+	.lb-content-box{
+		@backdrop();
+	}
+	
+	.lb-button {
+		@buttons();
+		border: none !important;
+		color: @creamColor !important;
+	}
+	
+	.lb-button:hover {
+		@buttonsHover();
+		color: @creamColor !important;
+	}
+	
+	/*ANCHOR [Game page: TILES ] */
+	
+	
+	
+	.conversion-tls-content-box{
+		@backdrop();
+	}
+	
 	
 }
