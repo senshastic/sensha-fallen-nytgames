@@ -13,9 +13,9 @@
 @var color   	gradcolor4 "Gradient Color 4" rgb(26, 58, 102)
 ==/UserStyle== */
 
-@-moz-document regexp("https://www\\.nytimes\\.com/(games.*|crosswords(/.*)?|puzzles(/.*)?)$") {
+@-moz-document regexp("https://www\\.nytimes\\.com/(games.*|crosswords(/.*)?|interactive(/.*)?|puzzles(/.*)?)$") {
 
-	/*ANCHOR [SNESHLIB - Start] */
+	/*SECTION [SNESHLIB - Start] */
 	
 	/*ANCHOR [VARIABLES]*/
 
@@ -155,7 +155,7 @@
 		background-color: transparent;
 	 }
 
-	/*ANCHOR [SNESHLIB - End]*/
+	/*!SECTION [SNESHLIB - End]*/
 	
 	/*ANCHOR [Top bar] */
 	
@@ -588,21 +588,121 @@
 	
 	/*ANCHOR [CONNECTIONS BOT] */
 	
-	.nytapp-vi-interactive.nytapp-vi-interactive-minimal,
-	.page-0.fides-overlay-modal-link-shown.tap,
-	.interactive,
-	.interactive-minimal.meteredContent.interactive-content.interactive-size-medium.css-1n5umza,
-	div.fides-modal-content, 
-	.nav-buttons.svelte-14ye05.svelte-14ye05,
-	.page.tap.intro.svelte-14ye05.svelte-14ye05, .page.tap.context.svelte-14ye05.svelte-14ye05, 
-	.bot-wrapper.svelte-14ye05.svelte-14ye05, 
-	.g-block.g-block-margin.svelte-1pj7zvu {
-		background-color: red !important;
+	
+	.header-container.svelte-armixu.svelte-armixu {
+		@disappear();
 	}
-	.header-container.svelte-armixu.svelte-armixu,
-	.bot-wrapper.svelte-14ye05.svelte-14ye05 {
-		background-color: transparent !important;
+	
+	.page-0.tap.fides-overlay-modal-link-shown,
+	.svelte-armixu,
+	.bot-wrapper.svelte-14ye05.svelte-14ye05,
+	.stat-container.description.svelte-18w6z83.svelte-18w6z83,
+	.note.svelte-55hn51,
+	.message-not-popular-guess.svelte-ldghs9.svelte-ldghs9, .message-multiple.svelte-ldghs9.svelte-ldghs9,
+	.svelte-1447c2a {
+		color: @creamColor !important;
 	}
+	
+	.action-button.svelte-armixu {
+		@buttons();
+		border: none !important;
+	}
+	
+	
+	.row.player.svelte-uogwoi.svelte-uogwoi {
+		@backdrop(); 
+		border: none !important;
+	}
+	
+	.action-button.svelte-armixu:hover {
+		@buttonsHover();
+		border: none !important;
+	}
+	
+	
+	.clickabale.svelte-14ye05,
+	.progressBar.svelte-14ye05,
+	button.svelte-18w6z83 {
+		@buttons();
+		border: none !important;
+	}
+	
+	
+	.select.closed.svelte-55hn51,
+	button.svelte-55hn51,
+	button.svelte-1nkogu8,
+	button.svelte-13nmzwh, 
+	.css-m0ylx4, 
+	.css-1qyguuv,
+	.css-t0f7tz {
+		@buttons();
+		border: none !important;
+		color: @creamColor !important;
+	}
+	
+	.clickabale.svelte-14ye05:hover,
+	button.svelte-18w6z83:hover,
+	button.svelte-55hn51:hover,
+	button.svelte-1nkogu:hover,
+	button.svelte-13nmzwh:hover,
+	.css-m0ylx4:hover,
+	.css-1qyguuv:hover,
+	.css-kdzckd:hover {
+		@buttonsHover();
+		border: none !important;
+	}
+	
+	.css-kdzckd {
+		@transparentButtons();
+		border: none !important;
+	}
+	
+	.css-kdzckd:hover {
+		@transparentButtonsHover();
+		border: none !important;
+	}
+	button.svelte-l0feat {
+		@transparentButtons();
+		background: #509c48db !important;
+	}
+	
+	button.svelte-l0feat:hover {
+		@transparentButtonsHover();
+		background: #77e36cdb !important;
+	}
+	
+	
+	.player.svelte-55hn51 .your-game-text.svelte-55hn51,
+	.percentage-value.player.svelte-ldghs9.svelte-ldghs9:before,
+	.grid.svelte-jcgn1t,
+	.player.svelte-sw8ltp .players.svelte-sw8ltp:after { 
+		border: 1.5px solid @creamColor;
+	}
+	
+	
+	.row.svelte-ldghs9 {
+		color: black;
+	}
+	
+	/* Account sidebar styling */ 
+	
+	.css-xe33nq,
+	.css-13poeb,
+	.css-qhqcp9 {
+		@backdrop();
+		color: @creamColor !important;
+		border: none !important;
+	}
+	
+	.css-kgavlj,
+	.css-ezzsm3.e1mqazyv0,
+	.css-1hiswtt, 
+	.css-6tvjw1, 
+	.css-xdf6l6, 
+	{
+		color: @creamColor !important;
+	}
+
 	
 	
 	/*ANCHOR [Game page: STRANDS] */
@@ -867,7 +967,6 @@
 	.conversion-tls-content-box{
 		@backdrop();
 	}
-	
-	
+
 }
 
