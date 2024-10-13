@@ -579,12 +579,17 @@
 		color: #5c0f4a;
 	}
 	
-	/* Connections Bot */ 
+	/*ANCHOR [CONNECTIONS BOT] */
 	
 	.nytapp-vi-interactive.nytapp-vi-interactive-minimal,
 	.page-0.fides-overlay-modal-link-shown.tap,
 	.interactive,
-	.interactive-minimal.meteredContent.interactive-content.interactive-size-medium.css-1n5umza {
+	.interactive-minimal.meteredContent.interactive-content.interactive-size-medium.css-1n5umza,
+	div.fides-modal-content, 
+	.nav-buttons.svelte-14ye05.svelte-14ye05,
+	.page.tap.intro.svelte-14ye05.svelte-14ye05, .page.tap.context.svelte-14ye05.svelte-14ye05, 
+	.bot-wrapper.svelte-14ye05.svelte-14ye05, 
+	.g-block.g-block-margin.svelte-1pj7zvu {
 		background-color: red !important;
 	}
 	.header-container.svelte-armixu.svelte-armixu,
