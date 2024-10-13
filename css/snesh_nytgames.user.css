@@ -15,7 +15,7 @@
 
 @-moz-document regexp("https://www\\.nytimes\\.com/(games.*|crosswords(/.*)?|puzzles(/.*)?)$") {
 
-	/*ANCHOR [SNESHLIB - Start] */
+		/*ANCHOR [SNESHLIB - Start] */
 	
 	/*ANCHOR [VARIABLES]*/
 
@@ -29,6 +29,18 @@
 	
 	@gradientBackground: {
 		background: linear-gradient(109.6deg, @gradcolor3 0%, @gradcolor4 25%, @gradcolor1 50%, @gradcolor2 100%);
+	}
+
+	@gradientAnimation: {
+		0% {
+			background-position: 0% 0%;
+		}
+		50% {
+			background-position: 100% 100%;
+		}
+		100% {
+			background-position: 0% 0%;
+		}
 	}
 	
 	@buttons: {
@@ -137,6 +149,12 @@
 		opacity: 0.23 !important;
 	}
 
+	@hoverChannelSlide: {
+		margin-left: 10px !important;
+		transition: margin-left 0.2s ease;
+		background-color: transparent;
+	 }
+
 	/*ANCHOR [SNESHLIB - End]*/
 	
 	/*ANCHOR [Top bar] */
@@ -180,15 +198,7 @@
 	
 
 	@keyframes gradientAnimation {
-		0% {
-			background-position: 0% 0%;
-		}
-		50% {
-			background-position: 100% 100%;
-		}
-		100% {
-			background-position: 0% 0%;
-		}
+		@gradientAnimation();
 	}
 	
 
@@ -239,9 +249,7 @@
 	
 	
 	.pz-nav-drawer__link:hover {
-		margin-left: 10px !important;
-		transition: margin-left 0.2s ease;
-		background-color: transparent;
+		@hoverChannelSlide();
 	}
 	
 	.pz-nav-drawer__link.selected {
